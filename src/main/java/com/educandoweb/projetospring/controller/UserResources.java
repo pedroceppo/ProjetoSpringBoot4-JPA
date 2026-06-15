@@ -1,4 +1,4 @@
-package com.educandoweb.projetospring.resources;
+package com.educandoweb.projetospring.controller;
 
 import com.educandoweb.projetospring.entities.User;
 import com.educandoweb.projetospring.services.UserService;
@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.function.EntityResponse;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
