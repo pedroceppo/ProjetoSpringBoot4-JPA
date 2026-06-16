@@ -22,13 +22,27 @@ public class Order implements Serializable {
     @JoinColumn(name = "client_id")
     private User client;
 
+    private Integer orderstatus;
+
+
     public Order() {
     }
 
-    public Order(Long id, Instant moment, User client) {
+    public Order(Long id, Instant moment,OrderStatus orderStatus, User client) {
         this.id = id;
         this.moment = moment;
         this.client = client;
+        setOrderstatus(orderStatus);
+    }
+
+    public OrderStatus getOrderstatus() {
+        return OrderStatus.valueOf(orderstatus);
+    }
+
+    public void setOrderstatus(OrderStatus orderstatus) {
+        if(orderstatus != null) {
+            this.orderstatus = orderstatus.getCode();
+        }
     }
 
     public Long getId() {
